@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import shap
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 # 页面内容设置
 # 页面名称
