@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import shap
-import matplotlib.pyplot as plt
+import matplotlib as plt
 
 # 页面内容设置
 # 页面名称
@@ -38,7 +38,7 @@ def predict_quality(model, df):
     return y_pred[:, 1]
 
 # 导入模型
-model = joblib.load('D:\\Python\\老年心衰\\30d特因再入院\\模型\\catb.pkl')##导入相应的模型
+model = joblib.load('catb.pkl')##导入相应的模型
 st.sidebar.title("Features")
 
 # 设置各项特征的输入范围和选项
@@ -267,8 +267,6 @@ features = {'Smoke': Smoke, 'Drink': Drink,
 features_df = pd.DataFrame([features])
 #显示输入的特征
 st.table(features_df)
-
-from skimage import io,data
 
 #显示预测结果与shap解释图
 if st.button('Predict'):
