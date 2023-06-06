@@ -42,7 +42,7 @@ model = joblib.load('catb.pkl')##导入相应的模型
 st.sidebar.title("Features")
 
 # 设置各项特征的输入范围和选项
-Smoke = st.sidebar.selectbox(label='Smoke', options=[0, 1], format_func=lambda x: option_name(x), index=0)
+Smoke = st.sidebar.selectbox(label='Smoking', options=[0, 1], format_func=lambda x: option_name(x), index=0)
 Drink = st.sidebar.selectbox(label='Drink', options=[0, 1], format_func=lambda x: option_name(x), index=0)
 SBP = st.sidebar.number_input(label='SBP', min_value=50.0,
                                   max_value=246.0,
